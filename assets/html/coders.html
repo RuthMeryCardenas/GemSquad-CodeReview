@@ -2,9 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <!-- Enlazando css que se llama style.css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleDropDown.css">
+    <!-- Enlazando tipo de letra "Raleway" -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+    <title>El Capitán V 0.0.1</title>
   </head>
   <body>
-    <h1>Estas en perfil</h1>
+    
+<!-- Javascript -->
+	<script src='assets/js/coders.js'></script>
+	<script src='assets/js/main.js'></script>
+
+	<footer class="boton-volver-inicio">
+
+	<a href="index.html" id="regresar">Regresar al inicio</a>
+
+	</footer>
+	<script>
+		var myParam = location.search.split('nombre=')[1]
+		document.getElementById("regresar").addEventListener('click',function(e) {
+			this.href += "?nombre="+ myParam;
+		})</script>
   </body>
 </html>
