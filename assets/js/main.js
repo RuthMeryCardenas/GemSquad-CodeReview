@@ -12,22 +12,7 @@
   var dSP3Lessons = document.getElementById('SP3lessons');
   var dSP3Quiz = document.getElementById('SP3quiz');
   var dResults = document.getElementById('results');
-  //Implementando función que mostrará el menú del dropdown
-  function showMenu() {
-	document.getElementById("myDropdown").classList.toggle("show");
-  }
-  window.onclick = function(event) {
-  	if (!event.target.matches('.dropbtn')) {
-  		var dropdowns = document.getElementsByClassName("dropdown-content");
-  		var i;
-  		for (i = 0; i < dropdowns.length; i++) {
-  			var openDropdown = dropdowns[i];
-  			if (openDropdown.classList.contains('show')) {
-  				openDropdown.classList.remove('show');
-  			}
-  		}
-  	}
-  }
+
   //Implementando funcion show --> muestra el Sprint seleccioado
   function show(toShow) {
     toShow.style.display = "block";
@@ -45,13 +30,30 @@
       rQuestionB = document.getElementsByName('q2');
       rQuestionC = document.getElementsByName('q3');
       hide(dSP1Quiz);
+        if (rQuestionA[0].checked == false && rQuestionA[1].checked == false && rQuestionA[2].checked == false){
+          alert ("Por favor responde la primera pregunta");
+        } else if (rQuestionB[0].checked == false && rQuestionB[1].checked == false && rQuestionB[2].checked == false){
+          alert ("Por favor responde la segunda pregunta");
+        } else if (rQuestionC[0].checked == false && rQuestionC[1].checked == false && rQuestionC[2].checked == false){
+          alert ("Por favor responde la tercera pregunta");
+        }
     }
+
+
     if (dSP2Quiz.style.display == "block") {
       rQuestionA = document.getElementsByName('q4');
       rQuestionB = document.getElementsByName('q5');
       rQuestionC = document.getElementsByName('q6');
       hide(dSP2Quiz);
+        if (rQuestionA[0].checked == false && rQuestionA[1].checked == false && rQuestionA[2].checked == false){
+          alert ("Por favor responde la primera pregunta");
+        } else if (rQuestionB[0].checked == false && rQuestionB[1].checked == false && rQuestionB[2].checked == false){
+          alert ("Por favor responde la segunda pregunta");
+        } else if (rQuestionC[0].checked == false && rQuestionC[1].checked == false && rQuestionC[2].checked == false){
+          alert ("Por favor responde la tercera pregunta");
+        }
     }
+
     for(var i = 0; i < rQuestionA.length; i++){
         if(rQuestionA[i].checked){
           score += parseInt(rQuestionA[i].value);
@@ -101,13 +103,5 @@
     show(dSP3Lessons);
     //show(dSP3Quiz);
   }
-//CARGA DEL FORMULARIO
-  //Implementando la función CallBack del evento onload
-  window.onload = function () {
-    // var nameCoder = prompt("Ingresa tu nombre");
-    // if (nameCoder != "" || nameCoder != null ) {
-    //   document.getElementsByClassName('dropdown')[0].innerHTML = "Hola coder " + nameCoder;
-    //   bSprint2.click();
-    // }
-    bSprint2.click();
-  }
+
+//agregando alerts: responer preguntas
