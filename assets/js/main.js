@@ -32,10 +32,13 @@
       hide(dSP1Quiz);
         if (rQuestionA[0].checked == false && rQuestionA[1].checked == false && rQuestionA[2].checked == false){
           alert ("Por favor responde la primera pregunta");
+          dSP1Quiz.style.display = "block";
         } else if (rQuestionB[0].checked == false && rQuestionB[1].checked == false && rQuestionB[2].checked == false){
           alert ("Por favor responde la segunda pregunta");
+          dSP1Quiz.style.display = "block";
         } else if (rQuestionC[0].checked == false && rQuestionC[1].checked == false && rQuestionC[2].checked == false){
           alert ("Por favor responde la tercera pregunta");
+          dSP1Quiz.style.display = "block";
         }
     }
 
@@ -47,10 +50,15 @@
       hide(dSP2Quiz);
         if (rQuestionA[0].checked == false && rQuestionA[1].checked == false && rQuestionA[2].checked == false){
           alert ("Por favor responde la primera pregunta");
+          dSP2Quiz.style.display = "block";
+
+
         } else if (rQuestionB[0].checked == false && rQuestionB[1].checked == false && rQuestionB[2].checked == false){
           alert ("Por favor responde la segunda pregunta");
+          dSP2Quiz.style.display = "block";
         } else if (rQuestionC[0].checked == false && rQuestionC[1].checked == false && rQuestionC[2].checked == false){
           alert ("Por favor responde la tercera pregunta");
+          dSP2Quiz.style.display = "block";
         }
     }
 
@@ -65,13 +73,15 @@
           score += parseInt(rQuestionC[i].value);
         }
       }
+
+
     show(dResults);
     dResults.innerHTML = "Tienes " + score + " correctas";
     hide(dSubmit);
   }
   //Implementando las funciones CallBack del evento onclick de cada button
   bSprint1.onclick = function () {
-    document.getElementById("formQuiz").reset();
+    document.getElementById("formQuiz");
     hide(dResults);
     hide(dSP2Lessons);
     hide(dSP2Quiz);
@@ -83,7 +93,7 @@
   }
   bSprint2.onclick = function () {
     hide(dResults);
-    document.getElementById("formQuiz").reset();
+    document.getElementById("formQuiz");
     hide(dSP1Lessons);
     hide(dSP1Quiz);
     hide(dSP3Lessons);
@@ -93,7 +103,7 @@
     show(dSubmit);
   }
   bSprint3.onclick = function () {
-    document.getElementById("formQuiz").reset();
+    document.getElementById("formQuiz");
     hide(dResults);
     hide(dSP2Lessons);
     hide(dSP2Quiz);
@@ -103,5 +113,3 @@
     show(dSP3Lessons);
     //show(dSP3Quiz);
   }
-
-//agregando alerts: responer preguntas
