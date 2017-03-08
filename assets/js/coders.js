@@ -1,25 +1,25 @@
-var array = [ { nombre : "Meche", apellido : "Zubieta",  promocion : "1era. promoción", estado : "Trabajando" },
-			 { nombre : "Arabela", apellido : "Rojas", promocion : "2da. promoción", estado : "Trabajando" },
-			 { nombre : "Maria", apellido : "Rosán",  promocion : "2da. promoción", estado : "Trabajando" },
-			 { nombre : "Guadalupe", apellido : "Racio",  promocion : "3era. promoción", estado : "Trabajando" },
-			 { nombre : "Sara", apellido : "Casa",  promocion : "3era. promoción", estado : "Trabajando" },
-			 { nombre : "Daniella", apellido : "Durán",  promocion : "4ta. promoción", estado : "Trabajando" },
-			 { nombre : "Michelle", apellido : "Seguil",  promocion : "5ta. promoción", estado : "Trabajando" },
-			 { nombre : "Diana", apellido : "Navarro",  promocion : "5ta. promoción", estado : "Trabajando" } ];
+var array = [ { nombre : "Meche", apellido : "Zubieta",  grado : "1era. promoción", estado : "Trabajando" },
+			 { nombre : "Arabela", apellido : "Rojas", grado : "2da. promoción", estado : "Trabajando" },
+			 { nombre : "Maria", apellido : "Rosán",  grado : "2da. promoción", estado : "Trabajando" },
+			 { nombre : "Guadalupe", apellido : "Racio",  grado : "3era. promoción", estado : "Trabajando" },
+			 { nombre : "Sara", apellido : "Casa",  grado : "3era. promoción", estado : "Trabajando" },
+			 { nombre : "Daniella", apellido : "Durán",  grado : "4ta. promoción", estado : "Trabajando" },
+			 { nombre : "Michelle", apellido : "Seguil",  grado : "5ta. promoción", estado : "Trabajando" },
+			 { nombre : "Diana", apellido : "Navarro",  grado : "5ta. promoción", estado : "Trabajando" } ];
 
 
 function coders(e){
 	var coder = document.getElementById('coder');
 	
-	var text = '';
+	var texto = '';
 	var respuesta = '<div class="div-coder">' +
 					'<br>Nombre: ' + e.nombre +
 					'<br><br>Apellido: ' + e.apellido +
-					'<br><br>Promoción: ' + e.promocion +
+					'<br><br>Promoción: ' + e.grado +
 					'<br><br>Estado: ' + e.estado + '<br></div>';
 
-		text += respuesta;
-		document.write(text);
+		texto += respuesta;
+		document.write(texto);
 }
 
 array.forEach(coders);
